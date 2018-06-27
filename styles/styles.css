@@ -1,0 +1,95 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+.wrapper {
+    margin: 20px auto;
+    width: 600px;
+    height: 600px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.dog-house {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    width: 180px;
+}
+
+.shiba {
+    width: 100px;
+    position: absolute;
+    left: 50px;
+    bottom: -110px;
+    transition: bottom -0.5s ease;
+}
+
+.dog.up {
+    bottom: 0;
+}
+
+.shiba.petted {
+    animation-name: shake;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
+
+.mask {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 30px;
+	width: 100%;
+	background-color: white;
+	z-index: 5000;
+}
+
+
+@-webkit-keyframes shake {
+    from, to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    10%, 30%, 50%, 70%, 90% {
+      -webkit-transform: translate3d(-10px, 0, 0);
+      transform: translate3d(-10px, 0, 0);
+    }
+  
+    20%, 40%, 60%, 80% {
+      -webkit-transform: translate3d(10px, 0, 0);
+      transform: translate3d(10px, 0, 0);
+    }
+  }
+  
+  @keyframes shake {
+    from, to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    10%, 30%, 50%, 70%, 90% {
+      -webkit-transform: translate3d(-10px, 0, 0);
+      transform: translate3d(-10px, 0, 0);
+    }
+  
+    20%, 40%, 60%, 80% {
+      -webkit-transform: translate3d(10px, 0, 0);
+      transform: translate3d(10px, 0, 0);
+    }
+  }
